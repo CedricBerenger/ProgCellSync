@@ -264,7 +264,7 @@ void loop() {
 				</section>
 				
 				
-				<section data-markdown data-background="linear-gradient(141deg, #0061ac 0%,  #167d77 75%)">
+				<section data-markdown data-background="linear-gradient(141deg, #0061ac 0%,  #00545c 75%)">
 					<textarea data-template>
 						## Algorithme Asynchrone ou Algorithme Synchrone, quelles différences ?
 					</textarea>
@@ -280,7 +280,7 @@ void loop() {
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="#0061ac">
+				<section data-markdown data-background="res/embouteillage.png" data-background-color="#0061ac">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Bilan de l'expérience n°1:
@@ -296,25 +296,35 @@ void loop() {
 				</section>
 				
 				
-				<section data-markdown data-background="#167d77">
+				<section data-markdown data-background="#00545c">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Expérience n°2: Algorithme Synchrone
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="#167d77">
+				<section data-markdown data-background="res/traffic.png" data-background-color="#00545c">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Bilan de l'expérience n°2:
 						* Pas de congestion:
 							* Usage mémoire réduit
 						* Terminaison prévisible
-						* Pas d'attente:
-							* Possibilité de s'endormir et de mettre une alarme
+						* Pas d'attente active:
+							* Utilisation d'un Réveil
 					</textarea>
 				</section>
 				
+				<section data-background="#167d77">
+						<h2>Tri à Bulles Distribué</h2>
+						<h3>Algorithme Optimal!</h3>
+							<div id="bsort"></div>
+						
+						<script type="text/javascript">
+							var bsort = new Automcell("bsort",10,1,new BSort());
+							bsort.run();
+						</script>
+				</section>
 				
 				<section data-markdown data-background="linear-gradient(141deg, #5e00bb 0%,  #3100bb 75%)">
 					<textarea data-template>
@@ -322,7 +332,7 @@ void loop() {
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="#5e00bb">
+				<section data-markdown  data-background-color="#5e00bb">
 					<textarea data-template>
 						## Synchroniser un réseau
 						## Expérience n°3:
@@ -331,7 +341,7 @@ void loop() {
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="#5e00bb">
+				<section data-markdown data-background="res/clock.png" data-background-color="#5e00bb">
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Bilan de l'expérience 3:
@@ -349,7 +359,7 @@ void loop() {
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="#3100bb">
+				<section data-markdown data-background="res/grues.png" data-background-color="#3100bb">
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Bilan de l'expérience 4:
