@@ -1,5 +1,6 @@
 <!doctype html>
 <html>
+
 	<head>
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
@@ -37,35 +38,46 @@
 				</section>
 				
 				
-				<section data-markdown data-background="#004e8a">
-					<textarea data-template>
-						## LED's Chat: Une startup Innovante
-						
-					</textarea>
+				<section data-background-color="#004e8a">
+					<img src="res/ledschat.png"></img>
+					La première dalle LED Intelligente et Connectée
 				</section>
 				
-				
-				<section data-markdown>
-					<textarea data-template>
-						## LED's Chat: Assemblage
-						<iframe width="854" height="480" src="https://www.youtube.com/embed/rEpAcpJl2OY?autoplay=0&loop=1&modestbranding=1&autohide=0&start=80&end=120" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			
-					</textarea>
-				</section>
-				
-				<section data-markdown>
+				<section data-markdown data-background-color="#36004d">
 					<textarea data-template>
 						## LED's Chat: Animations
 						<iframe width="854" height="480" src="https://www.youtube.com/embed/jobmdmFej90?autoplay=0&loop=1&modestbranding=1&autohide=0&start=5&end=45" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</textarea>
 				</section>
 				
-				<section data-markdown>
+				<section data-markdown data-background-color="#007f60">
 					<textarea data-template>
-						## Programmation Cellulaire
-						La programmation cellulaire, c'est...
+						## LED's Chat: Assemblage
+						<iframe width="854" height="480" src="https://www.youtube.com/embed/rEpAcpJl2OY?autoplay=0&loop=1&modestbranding=1&autohide=0&start=80&end=120" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			
 					</textarea>
 				</section>
 				
+				<section data-background-color="#2a0055">
+						<h2>Exposition MP2013</h2>
+						<img src="res/tomettes.jpg" class="stretch"></img>
+                </section>
+
+                <section data-background-color="#3f008c">
+                    <h2>SquareWave</h2>
+                    <img src="res/provence.jpg" class="stretch"></img>
+                </section>
+                
+                 <section  data-markdown data-background="#002b8b">
+					<textarea data-template>
+						## La Théorie: Les Automates Cellulaires
+						### Un Exemple Célèbre: le jeu de la vie. 
+						+ Grille de cellules colorés
+						+ Règles de transition locales
+						+ Comportement global
+						
+					</textarea>
+                </section>
+                
 				<section data-background="#007b5d">
 					<h2>Jeu de la vie</h2>
 					
@@ -77,7 +89,37 @@
 					</script>
 					
 				</section>
-				
+
+                <section data-markdown>
+                    <textarea data-template>
+                        ## La Pratique: La Programmation Cellulaire
+                        + État interne = mémoire
+                        + État pour les voisins = communication série 
+                        + Transitions = programme C                     
+                    </textarea>
+                </section>
+                
+                <section>
+                    <h2>Automate Interne</h2>
+                    <img src="res/automata.png" class="stretch"></img>
+                </section>
+
+				<section data-transition="none">
+                    <h2>Comparaison avec l'existant</h2>
+                    <img src="res/tv.png" class="stretch"></img>
+                </section>
+	
+				<section data-transition="none">
+                    <h2>Comparaison avec l'existant</h2>
+                    <img src="res/tv2.png" class="stretch"></img>
+                </section>
+                
+                <section data-transition="none">
+                    <h2>Comparaison avec l'existant</h2>
+                    <img src="res/tv3.png" class="stretch"></img>
+                </section>
+                
+               
 				<section data-background="#290061">
 					<h2>Calcul de Coordonnées</h2>
 					
@@ -88,8 +130,56 @@
 						coords.highlight(5,5);
 						coords.run();
 					</script>
-					
 				</section>
+				
+				<section>
+					<h2>Calcul de Coordonnées: Code</h2>
+					<pre class="c" style="width: 47%; margin: 0px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// État
+int x;
+int y;
+bool ok;</code></pre>
+					
+					<pre class="c" style="width: 47%; margin: 0px; margin-top: 10px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// Programme
+void init() {
+	if(relay) {
+		x = 0;
+		y = 0;
+		ok = false;
+	}
+	else
+		state = false;
+}
+
+void loop() {
+	if (in[DOWN].ok == true && ok == false) {
+		x = in[DOWN].x ;
+		y = in[DOWN].y + 1;
+		ok = vrai;
+	}
+	else if (in[LEFT].ok == true && ok == false) {
+		x = in[LEFT].x  + 1;
+		y = in[LEDT].y;
+		ok = true;
+	}
+	else if (in[UP].ok == true && ok == false) {
+		x = in[UP].x;
+		y = in[UP] - 1;
+		ok = true;
+	}
+	else if (in[RIGHT].ok == true && ok == false) {
+		x = in[RIGHT].x - 1;
+		y = in[RIGHT].y;
+		ok = true;
+	}
+
+	for(unsigned i = 0; i inférieur 4; i++) {
+		out[i].x = x;
+		out[i].y = y;
+		out[i].ok = ok;
+	}
+}</code></pre>
+                
+                </section>
 				
 				<section data-background="#007c4f">
 					<h2>Arbre Couvrant</h2>
@@ -103,6 +193,58 @@
 					</script>
 					
 				</section>
+				
+				<section data-background="#007c4f">
+					
+					<h2>Arbre Couvrant: Code</h2>
+					
+					
+                    <pre class="c" style="width: 47%; margin: 0px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// État interne
+int distance;
+int father;
+bool children[4];</code></pre>
+
+
+<pre class="c" style="width: 47%; margin: 0px; margin-top: 10px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// État pour les voisins
+int distance;
+bool father;</code></pre>
+
+<pre class="c" style="width: 47%; margin: 0px; margin-top: 10px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// Programme
+void init() {   
+    if(relay == true)
+        distance = 0;
+    else 
+        distance = -1;
+
+    father = -1;
+    for(unsigned i = 0; i inférieur 4; i++)
+        children[i] = false;
+}
+
+void loop() {   
+    if(relay == false) {
+        for(unsigned i = 0; i inférieur 4; i++) {
+            if(in[i].distance != -1) {
+                father = i;
+                distance = in[i].distance + 1;
+            }
+            if(in[i].father == true)
+                children[i] = true;
+            else 
+                children[i] = false;
+        }
+    }
+    for(unsigned i = 0; i inférieur 4; i++) {
+        if(father == true)
+            out[i].father = true;
+        else 
+            out[i].father = faux;
+
+        out[i].distance = distance;
+    }
+}</code></pre>
+                </section>
+
 				
 				<section data-markdown>
 					<textarea data-template>
@@ -235,6 +377,9 @@
 					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
 				]
 			});
+			
+			Reveal.configure({ slideNumber: 'c/t' });
 		</script>
 	</body>
+
 </html>

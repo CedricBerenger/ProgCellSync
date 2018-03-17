@@ -181,7 +181,9 @@
 			var parent = null;
 			var dmin = Infinity;
 			
-			if(state.burn)
+			state.burn = false;
+			
+			if(false && state.burn)
 			{
 				state.burn = false;
 				for(var c in dirCell)
