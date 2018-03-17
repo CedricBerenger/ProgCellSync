@@ -4,10 +4,11 @@
 		<meta charset="utf-8">
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<title>reveal.js</title>
+		<title>Prog. Cellulaire et Synchronisation</title>
 
 		<link rel="stylesheet" href="css/reveal.css">
-		<link rel="stylesheet" href="css/theme/black.css">
+		<link rel="stylesheet" href="css/automcell.css">
+		<link rel="stylesheet" href="css/theme/moon.css">
 
 		<!-- Theme used for syntax highlighting of code -->
 		<link rel="stylesheet" href="lib/css/zenburn.css">
@@ -21,6 +22,8 @@
 			document.getElementsByTagName( 'head' )[0].appendChild( link );
 		</script>
 		
+		<script src="js/automcell.js"></script>
+		
 		
 	</head>
 	<body>
@@ -33,6 +36,29 @@
 					</textarea>
 				</section>
 				
+				
+				<section data-markdown data-background="#004e8a">
+					<textarea data-template>
+						## LED's Chat: Une startup Innovante
+						
+					</textarea>
+				</section>
+				
+				
+				<section data-markdown>
+					<textarea data-template>
+						## LED's Chat: Assemblage
+						<iframe width="854" height="480" src="https://www.youtube.com/embed/rEpAcpJl2OY?autoplay=0&loop=1&modestbranding=1&autohide=0&start=80&end=120" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			
+					</textarea>
+				</section>
+				
+				<section data-markdown>
+					<textarea data-template>
+						## LED's Chat: Animations
+						<iframe width="854" height="480" src="https://www.youtube.com/embed/jobmdmFej90?autoplay=0&loop=1&modestbranding=1&autohide=0&start=5&end=45" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+					</textarea>
+				</section>
+				
 				<section data-markdown>
 					<textarea data-template>
 						## Programmation Cellulaire
@@ -40,19 +66,156 @@
 					</textarea>
 				</section>
 				
+				<section data-background="#007b5d">
+					<h2>Jeu de la vie</h2>
+					
+					<div id="gameoflife"></div>
+					
+					<script type="text/javascript">
+						var gameoflife = new Automcell("gameoflife",20,10,new GameOfLife());
+						gameoflife.run();
+					</script>
+					
+				</section>
 				
-				<section data-markdown>
-					<textarea data-template>
-						## LED's Chat
-					</textarea>
+				<section data-background="#290061">
+					<h2>Calcul de Coordonnées</h2>
+					
+					<div id="coords"></div>
+					
+					<script type="text/javascript">
+						var coords = new Automcell("coords",20,10,new Coords());
+						coords.highlight(5,5);
+						coords.run();
+					</script>
+					
+				</section>
+				
+				<section data-background="#007c4f">
+					<h2>Arbre Couvrant</h2>
+					
+					<div id="arbremojo"></div>
+					
+					<script type="text/javascript">
+						var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
+						arbremojo.highlight(5,5);
+						arbremojo.run();
+					</script>
+					
 				</section>
 				
 				<section data-markdown>
 					<textarea data-template>
 						## Synchronisation d'horloge
-						La synchronisation d'horloge c'est...
 					</textarea>
 				</section>
+				
+				<section data-markdown>
+					<textarea data-template>
+						## Équipe DALGO:
+						### Algorithmes Distribués
+						
+						## Ma thèse:
+						### Algorithmes scalables pour des réseaux de micro-controleurs.
+						
+					</textarea>
+				</section>
+				
+				
+				<section data-markdown data-background="linear-gradient(141deg, #0061ac 0%,  #167d77 75%)">
+					<textarea data-template>
+						## Algorithme Asynchrone ou Algorithme Synchrone, quelles différences ?
+					</textarea>
+				</section>
+				
+				
+				<section data-markdown data-background="#0061ac">
+					<textarea data-template>
+						## Asynchrone VS Synchrone
+						### Expérience n°1: Algorithme Asynchrone
+						
+						
+					</textarea>
+				</section>
+				
+				<section data-markdown data-background="#0061ac">
+					<textarea data-template>
+						## Asynchrone VS Synchrone
+						### Bilan de l'expérience n°1:
+						* Congestion:
+							* Dépassement de tampon
+						* Terminaison:
+							* Difficile a prédire
+						* Attente active:
+							* Réception imprivisible
+							* Consomation électrique
+						
+					</textarea>
+				</section>
+				
+				
+				<section data-markdown data-background="#167d77">
+					<textarea data-template>
+						## Asynchrone VS Synchrone
+						### Expérience n°2: Algorithme Synchrone
+					</textarea>
+				</section>
+				
+				<section data-markdown data-background="#167d77">
+					<textarea data-template>
+						## Asynchrone VS Synchrone
+						### Bilan de l'expérience n°2:
+						* Pas de congestion:
+							* Usage mémoire réduit
+						* Terminaison prévisible
+						* Pas d'attente:
+							* Possibilité de s'endormir et de mettre une alarme
+					</textarea>
+				</section>
+				
+				
+				<section data-markdown data-background="linear-gradient(141deg, #5e00bb 0%,  #3100bb 75%)">
+					<textarea data-template>
+						## Comment synchroniser un réseau asynchrone ?
+					</textarea>
+				</section>
+				
+				<section data-markdown data-background="#5e00bb">
+					<textarea data-template>
+						## Synchroniser un réseau
+						## Expérience n°3:
+						Première tentative naïve.
+						
+					</textarea>
+				</section>
+				
+				<section data-markdown data-background="#5e00bb">
+					<textarea data-template>
+						## Synchroniser un réseau
+						### Bilan de l'expérience 3:
+						* Horloge différentes,
+						* Différence de vitesse,
+						* => Déphasage progressif
+					</textarea>
+				</section>
+				
+				<section data-markdown data-background="#3100bb">
+					<textarea data-template>
+						## Synchroniser un réseau
+						### Expérience n°4:
+						Un algorithme de synchronisation
+					</textarea>
+				</section>
+				
+				<section data-markdown data-background="#3100bb">
+					<textarea data-template>
+						## Synchroniser un réseau
+						### Bilan de l'expérience 4:
+						* Synchronisation locale
+						* Gradient d'horloge
+					</textarea>
+				</section>
+				
 				
 			</div>
 		</div>
