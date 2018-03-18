@@ -82,6 +82,13 @@
 				width: 49%;
 			}
 
+            section img.img
+            {
+                background: none;
+                border: none;
+                box-shadow: none;
+            }
+
 		</style>
 		
 		
@@ -98,7 +105,7 @@
 				
 				
 				<section data-background-color="#004e8a">
-					<img src="res/ledschat.png"></img>
+					<img class="img" src="res/ledschat.png"></img>
 					La première dalle LED Intelligente et Connectée
 				</section>
 				
@@ -164,24 +171,17 @@
                 
                 <section>
                     <h2>Automate Interne</h2>
-                    <img src="res/automata.png" class="stretch"></img>
+                    <img src="res/automata.png" class="img stretch"></img>
                 </section>
 
-				<section data-transition="none">
+				<section>
                     <h2>Comparaison avec l'existant</h2>
-                    <img src="res/tv.png" class="stretch"></img>
+                    <div style="position:relative;" class="stretch">
+                        <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv.png" class="img"></img>
+                        <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv2.png" class="img fragment current-visible"></img>
+                        <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv3.png" class="img fragment current-visible"></img>
+                    </div>
                 </section>
-	
-				<section data-transition="none">
-                    <h2>Comparaison avec l'existant</h2>
-                    <img src="res/tv2.png" class="stretch"></img>
-                </section>
-                
-                <section data-transition="none">
-                    <h2>Comparaison avec l'existant</h2>
-                    <img src="res/tv3.png" class="stretch"></img>
-                </section>
-                
                
 				<section data-background="#290061">
 					<h2>Calcul de Coordonnées</h2>
@@ -229,7 +229,7 @@ void init() {           </code><!--
 				 --></pre>
 					
 					<pre class="c codeBottom codeTop"><!--
-				     --><code class="codeBottom codeTop fragment fade-in">    if(relay) {
+				     --><code class="codeBottom codeTop fragment fade-in">    if(relay == true) {
         x = 0;
         y = 0;
         ok = true;
@@ -377,10 +377,10 @@ void loop() {           </code><!--
 					
 					<pre class="c codeBottom codeTop"><!--
 				     --><code class="codeBottom codeTop fragment fade-in">    for(unsigned i = 0; i &lt; 4; i++) {
-        if(father == true)
+        if(father == i)
             out[i].father = true;
         else 
-            out[i].father = faux;
+            out[i].father = false;
 
         out[i].distance = distance;
     }                   </code><!--
