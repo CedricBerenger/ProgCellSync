@@ -24,6 +24,60 @@
 		</script>
 		
 		<script src="js/automcell.js"></script>
+
+		<style>
+			pre.codeBottom
+			{
+				padding-bottom: 0px;
+				border-bottom: 0px;
+				width: 100%;
+				margin: 0;
+				box-shadow: none;
+
+			}
+
+			pre.codeTop
+			{
+				padding-top: 0px;
+				border-top: 0px;
+				width: 100%;
+				margin: 0;
+				box-shadow: none;
+
+			}
+
+			pre.codeRight
+			{
+				float: right;
+				width: 49%;
+				margin: 0px;
+
+				box-shadow: none;
+			}
+
+			pre code.codeBottom
+			{
+				padding-bottom: 0px;
+				font-size: 14px; 
+				max-height: none; 
+				line-height: 14px;
+			}
+
+			pre code.codeTop
+			{
+				padding-top: 0px;
+				font-size: 13px; 
+				max-height: none; 
+				line-height: 13px;
+			}
+
+			.codeBack
+			{
+				background: #3f3f3f;
+				width: 49%;
+			}
+
+		</style>
 		
 		
 	</head>
@@ -134,50 +188,73 @@
 				
 				<section>
 					<h2>Calcul de Coordonnées: Code</h2>
-					<pre class="c" style="width: 47%; margin: 0px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// État
+					
+					<pre class="c codeRight"><!--
+				     --><code style="font-size: 14px; max-height: none; line-height: 14px;">// État
 int x;
 int y;
-bool ok;</code></pre>
+bool ok;			   </code><!--
+				 --></pre>
+					<div class="codeBack">
+					<pre class="c codeBottom"><!--
+				     --><code class="codeBottom">// Programme
+void init() {           </code><!--
+				 --></pre>
 					
-					<pre class="c" style="width: 47%; margin: 0px; margin-top: 10px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// Programme
-void init() {
-	if(relay) {
-		x = 0;
-		y = 0;
-		ok = false;
-	}
-	else
-		state = false;
-}
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">    if(relay) {
+        x = 0;
+        y = 0;
+        ok = false;
+    }
+    else
+        state = false; </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop">}
 
-void loop() {
-	if (in[DOWN].ok == true && ok == false) {
-		x = in[DOWN].x ;
-		y = in[DOWN].y + 1;
-		ok = vrai;
-	}
-	else if (in[LEFT].ok == true && ok == false) {
-		x = in[LEFT].x  + 1;
-		y = in[LEDT].y;
-		ok = true;
-	}
-	else if (in[UP].ok == true && ok == false) {
-		x = in[UP].x;
-		y = in[UP] - 1;
-		ok = true;
-	}
-	else if (in[RIGHT].ok == true && ok == false) {
-		x = in[RIGHT].x - 1;
-		y = in[RIGHT].y;
-		ok = true;
-	}
-
-	for(unsigned i = 0; i inférieur 4; i++) {
-		out[i].x = x;
-		out[i].y = y;
-		out[i].ok = ok;
-	}
-}</code></pre>
+void loop() {           </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">    if (in[DOWN].ok == true && ok == false) {
+        x = in[DOWN].x ;
+        y = in[DOWN].y + 1;
+        ok = vrai;
+    }                   </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">    else if (in[LEFT].ok == true && ok == false) {
+        x = in[LEFT].x  + 1;
+        y = in[LEFT].y;
+        ok = true;
+    }
+    else if (in[UP].ok == true && ok == false) {
+        x = in[UP].x;
+        y = in[UP] - 1;
+        ok = true;
+    }
+    else if (in[RIGHT].ok == true && ok == false) {
+        x = in[RIGHT].x - 1;
+        y = in[RIGHT].y;
+        ok = true;
+    }                   </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">    for(unsigned i = 0; i inférieur 4; i++) {
+        out[i].x = x;
+        out[i].y = y;
+        out[i].ok = ok;
+    }                   </code><!--
+				 --></pre>
+					
+					<pre class="c codeTop"><!--
+				     --><code class="codeTop">}						</code><!--
+			     --></pre>
+				</div>
                 
                 </section>
 				
