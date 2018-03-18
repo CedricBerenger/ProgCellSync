@@ -209,7 +209,7 @@ class DekuTree
 			{
 				var nbState = neighbors[n];
 				
-				if(nbState.d < dmin || (dmin != Infinity && nbState.d == dmin && Math.random() < 0.5))
+				if(nbState.d < dmin || (dmin != Infinity && nbState.d == dmin && Math.random() < -1))
 				{
 					dmin = nbState.d;
 					parent = n;
@@ -238,7 +238,7 @@ class DekuTree
 			{
 				dirCell[state.parent].style.backgroundColor = "rgb(0,200,200)";
 				dirCell.center.style.backgroundColor = "rgb(0,255,64)";
-				//dirCell.center.innerText = state.d;
+				dirCell.center.innerText = state.d;
 			}
 			
 			//Display children:
