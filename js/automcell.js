@@ -148,6 +148,8 @@ class DekuTree
 				cl.style.padding = "0px";
 				cl.style.margin = "0px";
 				cl.style.border = "none";
+				cl.style.textAlign = "center";
+				cl.style.lineHeight = "16px";
 			}
 		}
 		cell.appendChild(cell.table);
@@ -236,8 +238,8 @@ class DekuTree
 			//Display parent and distance:
 			if(state.parent != null)
 			{
-				dirCell[state.parent].style.backgroundColor = "rgb(0,200,200)";
-				dirCell.center.style.backgroundColor = "rgb(0,255,64)";
+				dirCell[state.parent].style.backgroundColor = "#006545";
+				dirCell.center.style.backgroundColor = "#007a42";
 				dirCell.center.innerText = state.d;
 			}
 			
@@ -246,7 +248,7 @@ class DekuTree
 			{
 				var nbState = neighbors[n];
 				if(nbState.parent == opDirs[n])
-					dirCell[n].style.backgroundColor =  "rgb(0,255,64)";
+					dirCell[n].style.backgroundColor =  "#007a42";
 			}
 			
 			if((state.root && state.broad) || (state.parent != null && neighbors[state.parent].broad))
@@ -310,7 +312,7 @@ class DekuTree
 	{
 		state.d = 0;
 		state.root = true;
-		cell.style.background = "rgb(0,255,64)"; 
+		cell.style.background = "#006545"; 
 	}
 	
 }
