@@ -70,6 +70,7 @@ class BSort
 		cell.style.backgroundSize = "100%";
 		cell.style.width = "100px";
 		cell.style.height = "100px";
+		cell.style.fontSize = Math.round(4+state.val/3) +"px";
 	}
 	
 	
@@ -78,15 +79,13 @@ class BSort
 		if(state.hello == "none" && neighbors["left"].hello == "right")
 			state.hello = "left";
 		
-		cell.style.backgroundImage = "url('Z.png')";
-		
 		switch(state.hello)
 		{
 			case "right":
 				if(neighbors["right"].val != null && state.val > neighbors["right"].val)
 					state.val = neighbors["right"].val;
 				
-				cell.style.backgroundColor = "green";
+				cell.style.backgroundColor = "#00522c";
 				state.hello = "left";
 				break;
 				
@@ -94,12 +93,13 @@ class BSort
 				if(neighbors["left"].val != null && state.val < neighbors["left"].val)
 					state.val = neighbors["left"].val;
 					
-				cell.style.backgroundColor = "blue";
+				cell.style.backgroundColor = "#23a066";
 				state.hello = "right";
 				break;
 		}
 		
 		cell.innerText = state.val;
+		cell.style.fontSize = Math.round(4+state.val/3) +"px";
 	}
 	
 	cloneState(state)

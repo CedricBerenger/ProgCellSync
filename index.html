@@ -184,38 +184,21 @@
                         <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv3.png" class="img fragment current-visible"></img>
                     </div>
                 </section>
-               
-				<section data-background="#290061" class="center">
-					<h2>Calcul de Coordonnées</h2>
-					
-					<div id="coords"></div>
-					
-					<script type="text/javascript">
-						var coordinates = new Automcell("coords",20,10,new Coords());
-						coordinates.highlight(0,0);
-					</script>
-					
-					<a onclick="coordinates.init()">Init</a>
-					<a onclick="coordinates.highlight(0,0)">Root</a>
-					<a onclick="coordinates.run()">Run</a>
-					<a onclick="coordinates.step()">Step</a>
-					<a onclick="coordinates.stop()">Stop</a>
-					
-				</section>
-
-				<section  data-markdown data-background="#290061" class="center">
+                
+                
+                <section  data-markdown data-background="#290061" class="center">
 					<textarea data-template>
 						## Calcul de Coordonnées: Théorie
 						+ Relai  = Coordonnée de (0, 0)
 						+ Module = Coordonnée voisin + décalage sur x ou y
 					</textarea>
                 </section>
-				
-				
-				
-				<section data-background="#290061" class="center">
-					<h2>Calcul de Coordonnées: Code</h2>
+                
+                <section>
 					
+					<section data-background="#290061" class="center">
+						<h2>Calcul de Coordonnées: Code</h2>
+						
 					<div class="stateRight">
 					<pre class="c codeRight"><!--
 				     --><code style="font-size: 14px; max-height: none; line-height: 14px;">// État
@@ -285,6 +268,29 @@ void loop() {           </code><!--
 			     --></pre>
 				</div>
                 
+					</section>
+					
+					
+					<section data-background="#290061" class="center">
+						<h2>Calcul de Coordonnées</h2>
+						
+						<div id="coords"></div>
+						
+						<script type="text/javascript">
+							var coordinates = new Automcell("coords",20,10,new Coords());
+							coordinates.highlight(0,9);
+							for(var i=0;i<9;i++)
+								coordinates.disableCell(0,i);
+						</script>
+						
+						<a onclick="coordinates.init()">Init</a>
+						<a onclick="coordinates.highlight(0,9)">Root</a>
+						<a onclick="coordinates.run()">Run</a>
+						<a onclick="coordinates.step()">Step</a>
+						<a onclick="coordinates.stop()">Stop</a>
+						
+					</section>
+					
                 </section>
 
                 <section  data-markdown data-background=data-background="#007c4f" class="center">
@@ -295,27 +301,9 @@ void loop() {           </code><!--
 					</textarea>
                 </section>
 				
-				<section data-background="#007c4f" class="center">
-					<h2>Arbre Couvrant</h2>
-					
-					<div id="arbremojo"></div>
-					
-					<script type="text/javascript">
-						var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
-						arbremojo.highlight(5,5);
-					</script>
-					
-					<a onclick="arbremojo.init()">Init</a>
-					<a onclick="arbremojo.highlight(5,5)">Root</a>
-					<a onclick="arbremojo.run()">Run</a>
-					<a onclick="arbremojo.step()">Step</a>
-					<a onclick="arbremojo.stop()">Stop</a>
-					<a onclick="arbremojo.getHighlightState().broad=true">Broadcast</a>
-					
-				</section>
+				<section>
 
-
-				<section data-background="#007c4f" class="center">
+					<section data-background="#007c4f" class="center">
 					
 					<h2>Arbre Couvrant: Code</h2>
 					
@@ -392,7 +380,31 @@ void loop() {           </code><!--
 				     --><code class="codeTop">}</code><!--
 		         --></pre>
 		          	</div>
-                </section>
+					</section>
+				
+					<section data-background="#007c4f" class="center">
+						<h2>Arbre Couvrant</h2>
+						
+						<div id="arbremojo"></div>
+						
+						<script type="text/javascript">
+							var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
+							arbremojo.highlight(0,9);
+							for(var i=0;i<9;i++)
+								arbremojo.disableCell(0,i);
+						</script>
+						
+						<a onclick="arbremojo.init()">Init</a>
+						<a onclick="arbremojo.highlight(0,9)">Root</a>
+						<a onclick="arbremojo.run()">Run</a>
+						<a onclick="arbremojo.step()">Step</a>
+						<a onclick="arbremojo.stop()">Stop</a>
+						<a onclick="arbremojo.getHighlightState().broad=true">Broadcast</a>
+						
+					</section>
+
+				</section>
+
 
 				
 				<section data-markdown data-background="#0e00c9" class="center">
