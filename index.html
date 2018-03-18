@@ -26,6 +26,7 @@
 		<script>
 			function fullscreen()
 			{
+				var el = document.documentElement;
 				if(el.requestFullScreen) {
 					el.requestFullScreen();
 				  } else if(el.mozRequestFullScreen) {
