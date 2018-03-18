@@ -130,14 +130,15 @@
 					<div id="coords"></div>
 					
 					<script type="text/javascript">
-						var coords = new Automcell("coords",20,10,new Coords());
-						coords.highlight(5,5);
+						var coordinates = new Automcell("coords",20,10,new Coords());
+						coordinates.highlight(0,0);
 					</script>
 					
-					<a onclick="coords.init()">Init</a>
-					<a onclick="coords.run()">Run</a>
-					<a onclick="coords.step()">Step</a>
-					<a onclick="coords.stop()">Stop</a>
+					<a onclick="coordinates.init()">Init</a>
+					<a onclick="coordinates.highlight(0,0)">Root</a>
+					<a onclick="coordinates.run()">Run</a>
+					<a onclick="coordinates.step()">Step</a>
+					<a onclick="coordinates.stop()">Stop</a>
 					
 				</section>
 				
@@ -203,9 +204,11 @@ void loop() {
 					</script>
 					
 					<a onclick="arbremojo.init()">Init</a>
+					<a onclick="arbremojo.highlight(5,5)">Root</a>
 					<a onclick="arbremojo.run()">Run</a>
 					<a onclick="arbremojo.step()">Step</a>
 					<a onclick="arbremojo.stop()">Stop</a>
+					<a onclick="arbremojo.getHighlightState().broad=true">Broadcast</a>
 					
 				</section>
 				

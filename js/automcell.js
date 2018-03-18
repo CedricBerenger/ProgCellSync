@@ -67,7 +67,6 @@ class BSort
 		cell.style.color = "white";
 		cell.innerText = state.val;
 		
-		cell.style.backgroundImage = "url('Z.png')";
 		cell.style.backgroundSize = "100%";
 		cell.style.width = "100px";
 		cell.style.height = "100px";
@@ -88,7 +87,6 @@ class BSort
 					state.val = neighbors["right"].val;
 				
 				cell.style.backgroundColor = "green";
-				cell.style.backgroundImage = "url('L.png')";
 				state.hello = "left";
 				break;
 				
@@ -97,7 +95,6 @@ class BSort
 					state.val = neighbors["left"].val;
 					
 				cell.style.backgroundColor = "blue";
-				cell.style.backgroundImage = "url('R.png')";
 				state.hello = "right";
 				break;
 		}
@@ -354,6 +351,12 @@ class GameOfLife
 		state.val= 0;
 		cell.style.background = "grey";
 	}
+	
+	highlight(cell,state)
+	{
+		state.val = 1-state.val;
+		cell.style.background = (state.val == 1) ? "black" : "white";
+	}
 }
 
 
@@ -367,6 +370,9 @@ class Automcell
 		this.height = height;
 		this.widthB = width+2;
 		this.heightB = height+2;
+		this.highlightX = 0;
+		this.highlightY = 0;
+		this.highlightState = undefined;
 		
 		//Construct topology table:
 		this.table = document.createElement("table");
@@ -404,6 +410,7 @@ class Automcell
 	
 	getCell(x,y) {	return this.table.rows[y+1].cells[x+1]; }
 	getState(x,y) { return this.states[y+1][x+1]; }
+	getHighlightState() { return this.highlightState; }
 	getPrevState(x,y) { return this.prevStates[y+1][x+1]; }
 	setPrevState(x,y,state){ this.prevStates[y+1][x+1] = state};
 	
@@ -515,9 +522,14 @@ class Automcell
 	}
 	
 	
-	highlight(x,y)
+	highlight(x,y,ev)
 	{
 		this.algo.highlight(this.getCell(x,y),this.getState(x,y));
+		if(ev != undefined)
+			ev.preventDefault();
+		this.highlightX = x;
+		this.highlightY = y;
+		this.highlightState = this.getState(x,y);
 	}
 	
 	mapClickEvents()
@@ -526,6 +538,8 @@ class Automcell
 			for(var x=-1;x<this.width+1;x++)
 			{
 				this.getCell(x,y).onclick = this.toggleCell.bind(this,x,y);
+				this.getCell(x,y).oncontextmenu = this.highlight.bind(this,x,y);
+															
 			}
 	}
 	
