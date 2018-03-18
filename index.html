@@ -146,8 +146,22 @@
 				<section data-background="#007b5d" class="center">
 					<h2>Jeu de la vie</h2>
 					
-                    <div style="width: 50%; float: right">
-                        Hello
+                    <div style="width: 45%; float: right; text-align: left; color: darkgray">
+                        <div style="display: inline-block; background: white; height: 30px; width: 30px;"></div> Cellule morte<br/>
+                        <div style="display: inline-block; background: black; height: 30px; width: 30px;"></div> Cellule vivante
+                        <br/>
+                        <br/>
+
+                        Si vivante:
+                        <ul>
+                            <li>Reste vivante si 2 ou 3 voisins vivants</li>
+                        </ul>
+                        Si morte:
+                        <ul>
+                            <li>Devient vivante si au moins 3 voisins vivants</li>
+                        </ul>
+                        
+
                     </div>
 					<div id="gameoflife" style="width: 50%"></div>
                     
