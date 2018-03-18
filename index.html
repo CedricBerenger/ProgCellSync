@@ -655,11 +655,14 @@ void loop() {           </code><!--
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
                 center : false,
+                allottedTime: 60 * 60 * 1000, //60 minutes
+  
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
 					{ src: 'plugin/notes/notes.js', async: true },
-					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+					{ src: 'plugin/elapsed-time-bar/elapsed-time-bar.js'}
 				]
 			});
 			
