@@ -22,7 +22,7 @@ class Coords
 			state.root = false;
 		}
 		
-		cell.style.backgroundColor ="rgb("+ 255*2/(Math.abs(state.x)+2) +",0,"+ 255*2/(Math.abs(state.y)+2) +")";
+		cell.style.backgroundColor ="rgb("+ Math.round(255*2/(Math.abs(state.x)+2)) +",0,"+ Math.round(255*2/(Math.abs(state.y)+2)) +")";
 		
 		cell.innerText = ((state.x == Infinity) ? "?" : state.x) +","+((state.y == Infinity) ? "?" : state.y);
 		if(state.x == Infinity && state.y == Infinity)
