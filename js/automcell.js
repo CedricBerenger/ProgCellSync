@@ -373,6 +373,7 @@ class Automcell
 		this.highlightX = 0;
 		this.highlightY = 0;
 		this.highlightState = undefined;
+		this.interval = null;
 		
 		//Construct topology table:
 		this.table = document.createElement("table");
@@ -512,6 +513,11 @@ class Automcell
 	
 	run()
 	{
+		if(this.interval != null)
+		{
+			this.stop();
+			return;
+		}
 		this.interval = setInterval(this.step.bind(this),400);
 	}
 	
@@ -519,6 +525,7 @@ class Automcell
 	stop()
 	{
 		clearInterval(this.interval);
+		this.interval = null;
 	}
 	
 	
