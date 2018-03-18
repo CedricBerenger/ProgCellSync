@@ -384,10 +384,10 @@ void loop() {           </code><!--
 					
 					<pre class="c codeBottom codeTop"><!--
 				     --><code class="codeBottom codeTop fragment fade-in">    for(unsigned i = 0; i &lt; 4; i++) {
-        if(father == true)
+        if(father == i)
             out[i].father = true;
         else 
-            out[i].father = faux;
+            out[i].father = false;
 
         out[i].distance = distance;
     }                   </code><!--
