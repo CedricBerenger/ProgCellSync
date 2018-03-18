@@ -85,8 +85,12 @@
 					
 					<script type="text/javascript">
 						var gameoflife = new Automcell("gameoflife",20,10,new GameOfLife());
-						gameoflife.run();
 					</script>
+					
+					<a onclick="gameoflife.init()">Init</a>
+					<a onclick="gameoflife.run()">Run</a>
+					<a onclick="gameoflife.step()">Step</a>
+					<a onclick="gameoflife.stop()">Stop</a>
 					
 				</section>
 
@@ -128,9 +132,16 @@
 					<script type="text/javascript">
 						var coords = new Automcell("coords",20,10,new Coords());
 						coords.highlight(5,5);
-						coords.run();
 					</script>
+					
+					<a onclick="coords.init()">Init</a>
+					<a onclick="coords.run()">Run</a>
+					<a onclick="coords.step()">Step</a>
+					<a onclick="coords.stop()">Stop</a>
+					
 				</section>
+				
+				
 				
 				<section>
 					<h2>Calcul de Coordonnées: Code</h2>
@@ -189,8 +200,12 @@ void loop() {
 					<script type="text/javascript">
 						var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
 						arbremojo.highlight(5,5);
-						arbremojo.run();
 					</script>
+					
+					<a onclick="arbremojo.init()">Init</a>
+					<a onclick="arbremojo.run()">Run</a>
+					<a onclick="arbremojo.step()">Step</a>
+					<a onclick="arbremojo.stop()">Stop</a>
 					
 				</section>
 				
