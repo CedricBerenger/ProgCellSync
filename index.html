@@ -174,21 +174,14 @@
                     <img src="res/automata.png" class="img stretch"></img>
                 </section>
 
-				<section data-transition="none">
+				<section>
                     <h2>Comparaison avec l'existant</h2>
-                    <img src="res/tv.png" class="img stretch"></img>
+                    <div style="position:relative;" class="stretch">
+                        <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv.png" class="img"></img>
+                        <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv2.png" class="img fragment current-visible"></img>
+                        <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv3.png" class="img fragment current-visible"></img>
+                    </div>
                 </section>
-	
-				<section data-transition="none">
-                    <h2>Comparaison avec l'existant</h2>
-                    <img src="res/tv2.png" class="img stretch"></img>
-                </section>
-                
-                <section data-transition="none">
-                    <h2>Comparaison avec l'existant</h2>
-                    <img src="res/tv3.png" class="img stretch"></img>
-                </section>
-                
                
 				<section data-background="#290061">
 					<h2>Calcul de Coordonnées</h2>
@@ -236,7 +229,7 @@ void init() {           </code><!--
 				 --></pre>
 					
 					<pre class="c codeBottom codeTop"><!--
-				     --><code class="codeBottom codeTop fragment fade-in">    if(relay) {
+				     --><code class="codeBottom codeTop fragment fade-in">    if(relay == true) {
         x = 0;
         y = 0;
         ok = true;
