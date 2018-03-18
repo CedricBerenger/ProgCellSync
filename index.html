@@ -200,10 +200,18 @@
 					<a onclick="coordinates.stop()">Stop</a>
 					
 				</section>
+
+				<section  data-markdown data-background="#290061">
+					<textarea data-template>
+						## Calcul de Coordonnées: Théorie
+						+ Relai  = Coordonnée de (0, 0)
+						+ Module = Coordonnée voisin + décalage sur x ou y
+					</textarea>
+                </section>
 				
 				
 				
-				<section>
+				<section data-background="#290061">
 					<h2>Calcul de Coordonnées: Code</h2>
 					
 					<div class="stateRight">
@@ -276,6 +284,14 @@ void loop() {           </code><!--
 				</div>
                 
                 </section>
+
+                <section  data-markdown data-background=data-background="#007c4f">
+					<textarea data-template>
+						## Arbre couvrant: Théorie
+						+ Relai  = Distance de 0
+						+ Module = Choisit son père avec distance minimale 
+					</textarea>
+                </section>
 				
 				<section data-background="#007c4f">
 					<h2>Arbre Couvrant</h2>
@@ -295,7 +311,8 @@ void loop() {           </code><!--
 					<a onclick="arbremojo.getHighlightState().broad=true">Broadcast</a>
 					
 				</section>
-				
+
+
 				<section data-background="#007c4f">
 					
 					<h2>Arbre Couvrant: Code</h2>
