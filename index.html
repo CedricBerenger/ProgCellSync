@@ -96,7 +96,7 @@
 	<body>
 		<div class="reveal">
 			<div class="slides">
-				<section data-markdown data-background="res/bg.png">
+				<section data-markdown data-background="res/bg.png" class="center">
 					<textarea data-template>
 						## Programmation Cellulaire et Synchronisation d'horloge						
 						Cédric Bérenger, Mathieu Caralp
@@ -104,36 +104,34 @@
 				</section>
 				
 				
-				<section data-background-color="#004e8a">
+				<section data-background-color="#004e8a" class="center">
 					<img class="img" src="res/ledschat.png"></img>
 					La première dalle LED Intelligente et Connectée
 				</section>
 				
-				<section data-markdown data-background-color="#36004d">
+				<section data-markdown data-background-color="#36004d" class="center">
 					<textarea data-template>
 						## LED's Chat: Animations
 						<iframe width="854" height="480" src="https://www.youtube.com/embed/jobmdmFej90?autoplay=0&loop=1&modestbranding=1&autohide=0&start=5&end=45" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background-color="#007f60">
+				<section data-markdown data-background-color="#007f60" class="center">
 					<textarea data-template>
 						## LED's Chat: Assemblage
 						<iframe width="854" height="480" src="https://www.youtube.com/embed/rEpAcpJl2OY?autoplay=0&loop=1&modestbranding=1&autohide=0&start=80&end=120" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>			
 					</textarea>
 				</section>
 				
-				<section data-background-color="#2a0055">
+				<section data-background-image="res/tomettes.jpg" style="top: 0px; text-align: left">
 						<h2>Exposition MP2013</h2>
-						<img src="res/tomettes.jpg" class="stretch"></img>
                 </section>
 
-                <section data-background-color="#3f008c">
+                <section data-background-image="res/provence.jpg" style="top: 0px; text-align: left">
                     <h2>SquareWave</h2>
-                    <img src="res/provence.jpg" class="stretch"></img>
                 </section>
                 
-                 <section  data-markdown data-background="#002b8b">
+                 <section  data-markdown data-background="#002b8b" class="center">
 					<textarea data-template>
 						## La Théorie: Les Automates Cellulaires
 						### Un Exemple Célèbre: le jeu de la vie. 
@@ -144,7 +142,7 @@
 					</textarea>
                 </section>
                 
-				<section data-background="#007b5d">
+				<section data-background="#007b5d" class="center">
 					<h2>Jeu de la vie</h2>
 					
 					<div id="gameoflife"></div>
@@ -160,7 +158,7 @@
 					
 				</section>
 
-                <section data-markdown>
+                <section data-markdown class="center">
                     <textarea data-template>
                         ## La Pratique: La Programmation Cellulaire
                         + État interne = mémoire
@@ -169,12 +167,12 @@
                     </textarea>
                 </section>
                 
-                <section>
+                <section class="center">
                     <h2>Automate Interne</h2>
                     <img src="res/automata.png" class="img stretch"></img>
                 </section>
 
-				<section>
+				<section class="center">
                     <h2>Comparaison avec l'existant</h2>
                     <div style="position:relative;" class="stretch">
                         <img style="position:absolute; top:0; left: 0; width: 100%;" src="res/tv.png" class="img"></img>
@@ -183,7 +181,7 @@
                     </div>
                 </section>
                
-				<section data-background="#290061">
+				<section data-background="#290061" class="center">
 					<h2>Calcul de Coordonnées</h2>
 					
 					<div id="coords"></div>
@@ -201,7 +199,7 @@
 					
 				</section>
 
-				<section  data-markdown data-background="#290061">
+				<section  data-markdown data-background="#290061" class="center">
 					<textarea data-template>
 						## Calcul de Coordonnées: Théorie
 						+ Relai  = Coordonnée de (0, 0)
@@ -211,7 +209,7 @@
 				
 				
 				
-				<section data-background="#290061">
+				<section data-background="#290061" class="center">
 					<h2>Calcul de Coordonnées: Code</h2>
 					
 					<div class="stateRight">
@@ -285,7 +283,7 @@ void loop() {           </code><!--
                 
                 </section>
 
-                <section  data-markdown data-background=data-background="#007c4f">
+                <section  data-markdown data-background=data-background="#007c4f" class="center">
 					<textarea data-template>
 						## Arbre couvrant: Théorie
 						+ Relai  = Distance de 0
@@ -293,12 +291,12 @@ void loop() {           </code><!--
 					</textarea>
                 </section>
 				
-				<section data-background="#007c4f">
+				<section data-background="#007c4f" class="center">
 					<h2>Arbre Couvrant</h2>
 					
 					<div id="arbremojo"></div>
 					
-					<script type="text/javascript">
+					<script type="text/javascript" class="center">
 						var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
 						arbremojo.highlight(5,5);
 					</script>
@@ -313,7 +311,7 @@ void loop() {           </code><!--
 				</section>
 
 
-				<section data-background="#007c4f">
+				<section data-background="#007c4f" class="center">
 					
 					<h2>Arbre Couvrant: Code</h2>
 					
@@ -393,13 +391,13 @@ void loop() {           </code><!--
                 </section>
 
 				
-				<section data-markdown>
+				<section data-markdown class="center">
 					<textarea data-template>
 						## Synchronisation d'horloge
 					</textarea>
 				</section>
 				
-				<section data-markdown>
+				<section data-markdown class="center">
 					<textarea data-template>
 						## Équipe DALGO:
 						### Algorithmes Distribués
@@ -411,14 +409,14 @@ void loop() {           </code><!--
 				</section>
 				
 				
-				<section data-markdown data-background="linear-gradient(141deg, #0061ac 0%,  #00545c 75%)">
+				<section data-markdown data-background="linear-gradient(141deg, #0061ac 0%,  #00545c 75%)" class="center">
 					<textarea data-template>
 						## Algorithme Asynchrone ou Algorithme Synchrone, quelles différences ?
 					</textarea>
 				</section>
 				
 				
-				<section data-markdown data-background="#0061ac">
+				<section data-markdown data-background="#0061ac" class="center">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Expérience n°1: Algorithme Asynchrone
@@ -427,7 +425,7 @@ void loop() {           </code><!--
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="res/embouteillage.png" data-background-color="#0061ac">
+				<section data-markdown data-background="res/embouteillage.png" data-background-color="#0061ac" class="center">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Bilan de l'expérience n°1:
@@ -443,14 +441,14 @@ void loop() {           </code><!--
 				</section>
 				
 				
-				<section data-markdown data-background="#00545c">
+				<section data-markdown data-background="#00545c" class="center">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Expérience n°2: Algorithme Synchrone
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="res/traffic.png" data-background-color="#00545c">
+				<section data-markdown data-background="res/traffic.png" data-background-color="#00545c" class="center">
 					<textarea data-template>
 						## Asynchrone VS Synchrone
 						### Bilan de l'expérience n°2:
@@ -462,7 +460,7 @@ void loop() {           </code><!--
 					</textarea>
 				</section>
 				
-				<section data-background="#167d77">
+				<section data-background="#167d77" class="center">
 						<h2>Tri à Bulles Distribué</h2>
 						<h3>Algorithme Optimal!</h3>
 							<div id="bsort"></div>
@@ -473,13 +471,13 @@ void loop() {           </code><!--
 						</script>
 				</section>
 				
-				<section data-markdown data-background="linear-gradient(141deg, #5e00bb 0%,  #3100bb 75%)">
+				<section data-markdown data-background="linear-gradient(141deg, #5e00bb 0%,  #3100bb 75%)" class="center">
 					<textarea data-template>
 						## Comment synchroniser un réseau asynchrone ?
 					</textarea>
 				</section>
 				
-				<section data-markdown  data-background-color="#5e00bb">
+				<section data-markdown  data-background-color="#5e00bb" class="center">
 					<textarea data-template>
 						## Synchroniser un réseau
 						## Expérience n°3:
@@ -488,7 +486,7 @@ void loop() {           </code><!--
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="res/clock.png" data-background-color="#5e00bb">
+				<section data-markdown data-background="res/clock.png" data-background-color="#5e00bb" class="center">
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Bilan de l'expérience 3:
@@ -498,7 +496,7 @@ void loop() {           </code><!--
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="#3100bb">
+				<section data-markdown data-background="#3100bb" class="center">
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Expérience n°4:
@@ -506,7 +504,7 @@ void loop() {           </code><!--
 					</textarea>
 				</section>
 				
-				<section data-markdown data-background="res/grues.png" data-background-color="#3100bb">
+				<section data-markdown data-background="res/grues.png" data-background-color="#3100bb" class="center">
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Bilan de l'expérience 4:
@@ -527,6 +525,7 @@ void loop() {           </code><!--
 			// - https://github.com/hakimel/reveal.js#configuration
 			// - https://github.com/hakimel/reveal.js#dependencies
 			Reveal.initialize({
+                center : false,
 				dependencies: [
 					{ src: 'plugin/markdown/marked.js' },
 					{ src: 'plugin/markdown/markdown.js' },
