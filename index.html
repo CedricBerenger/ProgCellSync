@@ -224,10 +224,10 @@ void init() {           </code><!--
 				     --><code class="codeBottom codeTop fragment fade-in">    if(relay) {
         x = 0;
         y = 0;
-        ok = false;
+        ok = true;
     }
     else
-        state = false; </code><!--
+        ok = false; </code><!--
 				 --></pre>
 					
 					<pre class="c codeBottom codeTop"><!--
@@ -240,7 +240,7 @@ void loop() {           </code><!--
 				     --><code class="codeBottom codeTop fragment fade-in">    if (in[DOWN].ok == true && ok == false) {
         x = in[DOWN].x ;
         y = in[DOWN].y + 1;
-        ok = vrai;
+        ok = true;
     }                   </code><!--
 				 --></pre>
 					
