@@ -139,8 +139,12 @@
 					
 					<script type="text/javascript">
 						var gameoflife = new Automcell("gameoflife",20,10,new GameOfLife());
-						gameoflife.run();
 					</script>
+					
+					<a onclick="gameoflife.init()">Init</a>
+					<a onclick="gameoflife.run()">Run</a>
+					<a onclick="gameoflife.step()">Step</a>
+					<a onclick="gameoflife.stop()">Stop</a>
 					
 				</section>
 
@@ -180,11 +184,19 @@
 					<div id="coords"></div>
 					
 					<script type="text/javascript">
-						var coords = new Automcell("coords",20,10,new Coords());
-						coords.highlight(5,5);
-						coords.run();
+						var coordinates = new Automcell("coords",20,10,new Coords());
+						coordinates.highlight(0,0);
 					</script>
+					
+					<a onclick="coordinates.init()">Init</a>
+					<a onclick="coordinates.highlight(0,0)">Root</a>
+					<a onclick="coordinates.run()">Run</a>
+					<a onclick="coordinates.step()">Step</a>
+					<a onclick="coordinates.stop()">Stop</a>
+					
 				</section>
+				
+				
 				
 				<section>
 					<h2>Calcul de Coordonnées: Code</h2>
@@ -266,8 +278,14 @@ void loop() {           </code><!--
 					<script type="text/javascript">
 						var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
 						arbremojo.highlight(5,5);
-						arbremojo.run();
 					</script>
+					
+					<a onclick="arbremojo.init()">Init</a>
+					<a onclick="arbremojo.highlight(5,5)">Root</a>
+					<a onclick="arbremojo.run()">Run</a>
+					<a onclick="arbremojo.step()">Step</a>
+					<a onclick="arbremojo.stop()">Stop</a>
+					<a onclick="arbremojo.getHighlightState().broad=true">Broadcast</a>
 					
 				</section>
 				
