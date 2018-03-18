@@ -187,7 +187,7 @@
                     
 					
 					<script type="text/javascript">
-						var gameoflife = new Automcell("gameoflife",10,10,new GameOfLife());
+						var gameoflife = new Automcell("gameoflife",10,9,new GameOfLife());
 					</script>
 					
 					<a onclick="gameoflife.init()">Init</a>
@@ -310,7 +310,7 @@ void loop() {           </code><!--
 						<div id="coords"></div>
 						
 						<script type="text/javascript">
-							var coordinates = new Automcell("coords",20,10,new Coords());
+							var coordinates = new Automcell("coords",20,9,new Coords());
 							coordinates.highlight(0,9);
 							for(var i=0;i<9;i++)
 								coordinates.disableCell(0,i);
@@ -418,7 +418,7 @@ void loop() {           </code><!--
 						<div id="arbremojo"></div>
 						
 						<script type="text/javascript">
-							var arbremojo = new Automcell("arbremojo",20,10,new DekuTree());
+							var arbremojo = new Automcell("arbremojo",20,9,new DekuTree());
 							arbremojo.highlight(0,9);
 							for(var i=0;i<9;i++)
 								arbremojo.disableCell(0,i);
@@ -446,9 +446,9 @@ void loop() {           </code><!--
 				<section data-markdown data-background="res/swarm.png" data-background-color="#0a0066" class="center">
 					<textarea data-template>
 						## Équipe DALGO (LIS)
-						### Algorithmique Distribués
+						### Algorithmique Distribué
 						* Problématique:
-							* Coordonnées différentes entités pour résoudre une tache commune.
+							* Coordonner différentes entités pour résoudre une tâche commune.
 						* Entités:
 							* Coeurs d'un même processeur
 							* Robots mobiles
@@ -467,12 +467,12 @@ void loop() {           </code><!--
 				
 				<section data-markdown data-background="res/galaxy.png" data-background-color="#150044" class="center">
 					<textarea data-template>
-						## Décryptage: Algorithme Scalable
+						## Décryptage: Algorithme scalable
 						### Insensibilité au changement d'échelle
 						* Fonctionne sur 10,100,1000,100000,...., 10^79 noeuds
-						* Sans perte de performance
+						* Sans perte de performances
 							* Temps d'exécution identique
-							* Mémoire utilisé identique
+							* Mémoire utilisée identique
 					</textarea>
 				</section>
 				
@@ -482,8 +482,8 @@ void loop() {           </code><!--
 						## Décryptage: Micro-controleurs
 						### De minuscules ordinateurs
 						* Complets (RAM + ROM + Radio +...)
-						* Peu Cher (0.20~0.80 centimes)
-						* Ressources Limités
+						* Peu cher (0.20~0.80 centimes)
+						* Ressources limitées
 							* 2~64 Ko de mémoire
 							* 8~80 Mhz
 					</textarea>
@@ -492,15 +492,15 @@ void loop() {           </code><!--
 				
 				<section data-markdown data-background="linear-gradient(141deg, #0061ac 0%,  #00545c 75%)" class="center">
 					<textarea data-template>
-						## Algorithme Asynchrone ou Algorithme Synchrone, quelles différences ?
+						## Algorithme asynchrone ou Algorithme synchrone, quelles différences ?
 					</textarea>
 				</section>
 				
 				
 				<section data-markdown data-background="#0061ac" class="center">
 					<textarea data-template>
-						## Asynchrone VS Synchrone
-						### Expérience n°1: Algorithme Asynchrone
+						## Asynchrone VS synchrone
+						### Expérience n°1: Algorithme asynchrone
 						
 						
 					</textarea>
@@ -508,15 +508,15 @@ void loop() {           </code><!--
 				
 				<section data-markdown data-background="res/embouteillage.png" data-background-color="#0061ac" class="center">
 					<textarea data-template>
-						## Asynchrone VS Synchrone
+						## Asynchrone VS synchrone
 						### Bilan de l'expérience n°1:
 						* Congestion:
 							* Dépassement de tampon
 						* Terminaison:
-							* Difficile a prédire
+							* Difficile à prédire
 						* Attente active:
-							* Réception imprivisible
-							* Consomation électrique
+							* Réception imprévisible
+							* Consommation électrique
 						
 					</textarea>
 				</section>
@@ -524,26 +524,26 @@ void loop() {           </code><!--
 				
 				<section data-markdown data-background="#00545c" class="center">
 					<textarea data-template>
-						## Asynchrone VS Synchrone
-						### Expérience n°2: Algorithme Synchrone
+						## Asynchrone VS synchrone
+						### Expérience n°2: Algorithme synchrone
 					</textarea>
 				</section>
 				
 				<section data-markdown data-background="res/traffic.png" data-background-color="#00545c" class="center">
 					<textarea data-template>
-						## Asynchrone VS Synchrone
+						## Asynchrone VS synchrone
 						### Bilan de l'expérience n°2:
 						* Pas de congestion:
 							* Usage mémoire réduit
 						* Terminaison prévisible
 						* Pas d'attente active:
-							* Utilisation d'un Réveil
+							* Utilisation d'un réveil
 					</textarea>
 				</section>
 				
 				<section data-background="#167d77" class="center">
-						<h2>Tri à Bulles Distribué</h2>
-						<h3>Algorithme Optimal!</h3>
+						<h2>Tri à bulles distribué</h2>
+						<h3>Algorithme optimal!</h3>
 							<div id="bsort"></div>
 						
 						<script type="text/javascript">
@@ -567,7 +567,7 @@ void loop() {           </code><!--
 					<textarea data-template>
 						## Synchroniser un réseau
 						## Expérience n°3:
-						Première tentative naïve, Top, Horloge!
+						Première tentative naïve, top, horloge!
 						
 					</textarea>
 				</section>
@@ -576,7 +576,7 @@ void loop() {           </code><!--
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Bilan de l'expérience 3:
-						* Horloge différentes,
+						* Horloges différentes,
 						* Différence de vitesse,
 						* => Déphasage progressif
 					</textarea>
@@ -587,7 +587,7 @@ void loop() {           </code><!--
 					<textarea data-template>
 						## Synchroniser un réseau
 						### Expérience n°4:
-						Synchronisation Maître-Esclaves, La "Ola"
+						Synchronisation maître-esclaves, la "ola"
 					</textarea>
 				</section>
 				
