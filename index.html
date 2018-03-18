@@ -46,12 +46,17 @@
 
 			}
 
-			pre.codeRight
+			.stateRight
 			{
 				float: right;
 				width: 49%;
-				margin: 0px;
+			}
 
+			pre.codeRight
+			{
+				width: 100%;
+				margin: 0px;
+				margin-bottom: 10px;
 				box-shadow: none;
 			}
 
@@ -201,12 +206,14 @@
 				<section>
 					<h2>Calcul de Coordonnées: Code</h2>
 					
+					<div class="stateRight">
 					<pre class="c codeRight"><!--
 				     --><code style="font-size: 14px; max-height: none; line-height: 14px;">// État
 int x;
 int y;
 bool ok;			   </code><!--
 				 --></pre>
+				 	</div>
 					<div class="codeBack">
 					<pre class="c codeBottom"><!--
 				     --><code class="codeBottom">// Programme
@@ -243,12 +250,12 @@ void loop() {           </code><!--
         y = in[LEFT].y;
         ok = true;
     }
-    else if (in[UP].ok == true && ok == false) {
+    else if (in[UP].ok == true &amp;&amp; ok == false) {
         x = in[UP].x;
         y = in[UP] - 1;
         ok = true;
     }
-    else if (in[RIGHT].ok == true && ok == false) {
+    else if (in[RIGHT].ok == true &amp;&amp; ok == false) {
         x = in[RIGHT].x - 1;
         y = in[RIGHT].y;
         ok = true;
@@ -256,7 +263,7 @@ void loop() {           </code><!--
 				 --></pre>
 					
 					<pre class="c codeBottom codeTop"><!--
-				     --><code class="codeBottom codeTop fragment fade-in">    for(unsigned i = 0; i inférieur 4; i++) {
+				     --><code class="codeBottom codeTop fragment fade-in">    for(unsigned i = 0; i &lt; 4; i++) {
         out[i].x = x;
         out[i].y = y;
         out[i].ok = ok;
@@ -293,32 +300,49 @@ void loop() {           </code><!--
 					
 					<h2>Arbre Couvrant: Code</h2>
 					
-					
-                    <pre class="c" style="width: 47%; margin: 0px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// État interne
+					<div class="stateRight">
+                    <pre class="c codeRight"><!--
+                     --><code style="font-size: 14px; max-height: none; line-height: 14px;">// État interne
 int distance;
 int father;
-bool children[4];</code></pre>
+bool children[4];       </code><!--
+                 --></pre>
 
-
-<pre class="c" style="width: 47%; margin: 0px; margin-top: 10px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// État pour les voisins
+					<pre class="c codeRight"><!--
+			         --><code style="font-size: 14px; max-height: none; line-height: 14px;">// État pour les voisins
 int distance;
-bool father;</code></pre>
-
-<pre class="c" style="width: 47%; margin: 0px; margin-top: 10px;"><code style="font-size: 14px; max-height: none; line-height: 14px;">// Programme
-void init() {   
-    if(relay == true)
+bool father;			</code><!--
+                 --></pre>
+                 	</div>
+                 	<div class="codeBack">
+					<pre class="c codeBottom"><!--
+				      --><code class="codeBottom">// Programme
+void init() {            </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">    if(relay == true)
         distance = 0;
     else 
         distance = -1;
 
     father = -1;
-    for(unsigned i = 0; i inférieur 4; i++)
-        children[i] = false;
-}
+    for(unsigned i = 0; i &lt; 4; i++)
+        children[i] = false;</code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop">}
 
-void loop() {   
-    if(relay == false) {
-        for(unsigned i = 0; i inférieur 4; i++) {
+void loop() {           </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop">    if(relay == false) { </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">        for(unsigned i = 0; i &lt; 4; i++) {
             if(in[i].distance != -1) {
                 father = i;
                 distance = in[i].distance + 1;
@@ -327,17 +351,28 @@ void loop() {
                 children[i] = true;
             else 
                 children[i] = false;
-        }
-    }
-    for(unsigned i = 0; i inférieur 4; i++) {
+        }       </code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop">    }</code><!--
+				 --></pre>
+					
+					<pre class="c codeBottom codeTop"><!--
+				     --><code class="codeBottom codeTop fragment fade-in">    for(unsigned i = 0; i &lt; 4; i++) {
         if(father == true)
             out[i].father = true;
         else 
             out[i].father = faux;
 
         out[i].distance = distance;
-    }
-}</code></pre>
+    }                   </code><!--
+				 --></pre>
+					
+					<pre class="c codeTop"><!--
+				     --><code class="codeTop">}</code><!--
+		         --></pre>
+		          	</div>
                 </section>
 
 				
